@@ -1,0 +1,23 @@
+ALGORITHM checkpoint1
+VAR
+    ph:STRING
+    nv,l:INTEGER:=0
+    nw:INTEGER:=1
+    i:INTEGER:=0
+BEGIN
+    Read(ph)
+    WHILE (ph[i]<>".") DO
+    i:=i+1
+    l:=l+1
+    IF (ph[i]=" ") THEN
+        nw := nw+1
+    END_IF
+    IF (ph[i] in ["a","A","e","E","i","I","o","O","u","U"]) THEN
+        nv:=nv+1
+    END_IF
+    END_WHILE
+    Write("this is the number of: words in this sentence,vowels & caracters :",nw,nv,l)
+END
+    
+
+    
